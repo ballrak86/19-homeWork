@@ -1,0 +1,756 @@
+root@otssTestServer:/home/lx/git/test# vagrant up
+Bringing machine 'inetRouter' up with 'virtualbox' provider...
+Bringing machine 'inetRouter2' up with 'virtualbox' provider...
+Bringing machine 'centralRouter' up with 'virtualbox' provider...
+Bringing machine 'centralServer' up with 'virtualbox' provider...
+==> inetRouter: You assigned a static IP ending in ".1" to this machine.
+==> inetRouter: This is very often used by the router and can cause the
+==> inetRouter: network to not work properly. If the network doesn't work
+==> inetRouter: properly, try changing this IP.
+==> inetRouter: Importing base box 'centos/7'...
+==> inetRouter: Matching MAC address for NAT networking...
+==> inetRouter: You assigned a static IP ending in ".1" to this machine.
+==> inetRouter: This is very often used by the router and can cause the
+==> inetRouter: network to not work properly. If the network doesn't work
+==> inetRouter: properly, try changing this IP.
+==> inetRouter: Checking if box 'centos/7' version '2004.01' is up to date...
+==> inetRouter: Setting the name of the VM: test_inetRouter_1638093115538_55188
+==> inetRouter: Clearing any previously set network interfaces...
+==> inetRouter: Preparing network interfaces based on configuration...
+    inetRouter: Adapter 1: nat
+    inetRouter: Adapter 2: intnet
+==> inetRouter: Forwarding ports...
+    inetRouter: 22 (guest) => 2222 (host) (adapter 1)
+==> inetRouter: Booting VM...
+==> inetRouter: Waiting for machine to boot. This may take a few minutes...
+    inetRouter: SSH address: 127.0.0.1:2222
+    inetRouter: SSH username: vagrant
+    inetRouter: SSH auth method: private key
+    inetRouter:
+    inetRouter: Vagrant insecure key detected. Vagrant will automatically replace
+    inetRouter: this with a newly generated keypair for better security.
+    inetRouter:
+    inetRouter: Inserting generated public key within guest...
+    inetRouter: Removing insecure key from the guest if it's present...
+    inetRouter: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> inetRouter: Machine booted and ready!
+==> inetRouter: Checking for guest additions in VM...
+    inetRouter: No guest additions were detected on the base box for this VM! Guest
+    inetRouter: additions are required for forwarded ports, shared folders, host only
+    inetRouter: networking, and more. If SSH fails on this machine, please install
+    inetRouter: the guest additions and repackage the box to continue.
+    inetRouter:
+    inetRouter: This is not an error message; everything may continue to work properly,
+    inetRouter: in which case you may ignore this message.
+==> inetRouter: Setting hostname...
+==> inetRouter: Configuring and enabling network interfaces...
+==> inetRouter: Rsyncing folder: /home/lx/git/test/ => /vagrant
+==> inetRouter: Running provisioner: shell...
+    inetRouter: Running: inline script
+==> inetRouter: Running provisioner: shell...
+    inetRouter: Running: inline script
+==> inetRouter2: You assigned a static IP ending in ".1" to this machine.
+==> inetRouter2: This is very often used by the router and can cause the
+==> inetRouter2: network to not work properly. If the network doesn't work
+==> inetRouter2: properly, try changing this IP.
+==> inetRouter2: Importing base box 'centos/7'...
+==> inetRouter2: Matching MAC address for NAT networking...
+==> inetRouter2: You assigned a static IP ending in ".1" to this machine.
+==> inetRouter2: This is very often used by the router and can cause the
+==> inetRouter2: network to not work properly. If the network doesn't work
+==> inetRouter2: properly, try changing this IP.
+==> inetRouter2: Checking if box 'centos/7' version '2004.01' is up to date...
+==> inetRouter2: Setting the name of the VM: test_inetRouter2_1638093157535_49380
+==> inetRouter2: Fixed port collision for 22 => 2222. Now on port 2200.
+==> inetRouter2: Clearing any previously set network interfaces...
+==> inetRouter2: Preparing network interfaces based on configuration...
+    inetRouter2: Adapter 1: nat
+    inetRouter2: Adapter 2: intnet
+==> inetRouter2: Forwarding ports...
+    inetRouter2: 22 (guest) => 2200 (host) (adapter 1)
+==> inetRouter2: Booting VM...
+==> inetRouter2: Waiting for machine to boot. This may take a few minutes...
+    inetRouter2: SSH address: 127.0.0.1:2200
+    inetRouter2: SSH username: vagrant
+    inetRouter2: SSH auth method: private key
+    inetRouter2:
+    inetRouter2: Vagrant insecure key detected. Vagrant will automatically replace
+    inetRouter2: this with a newly generated keypair for better security.
+    inetRouter2:
+    inetRouter2: Inserting generated public key within guest...
+    inetRouter2: Removing insecure key from the guest if it's present...
+    inetRouter2: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> inetRouter2: Machine booted and ready!
+==> inetRouter2: Checking for guest additions in VM...
+    inetRouter2: No guest additions were detected on the base box for this VM! Guest
+    inetRouter2: additions are required for forwarded ports, shared folders, host only
+    inetRouter2: networking, and more. If SSH fails on this machine, please install
+    inetRouter2: the guest additions and repackage the box to continue.
+    inetRouter2:
+    inetRouter2: This is not an error message; everything may continue to work properly,
+    inetRouter2: in which case you may ignore this message.
+==> inetRouter2: Setting hostname...
+==> inetRouter2: Configuring and enabling network interfaces...
+==> inetRouter2: Rsyncing folder: /home/lx/git/test/ => /vagrant
+==> inetRouter2: Running provisioner: shell...
+    inetRouter2: Running: inline script
+==> inetRouter2: Running provisioner: shell...
+    inetRouter2: Running: inline script
+==> centralRouter: You assigned a static IP ending in ".1" to this machine.
+==> centralRouter: This is very often used by the router and can cause the
+==> centralRouter: network to not work properly. If the network doesn't work
+==> centralRouter: properly, try changing this IP.
+==> centralRouter: Importing base box 'centos/7'...
+==> centralRouter: Matching MAC address for NAT networking...
+==> centralRouter: You assigned a static IP ending in ".1" to this machine.
+==> centralRouter: This is very often used by the router and can cause the
+==> centralRouter: network to not work properly. If the network doesn't work
+==> centralRouter: properly, try changing this IP.
+==> centralRouter: Checking if box 'centos/7' version '2004.01' is up to date...
+==> centralRouter: Setting the name of the VM: test_centralRouter_1638093199853_77484
+==> centralRouter: Fixed port collision for 22 => 2222. Now on port 2201.
+==> centralRouter: Clearing any previously set network interfaces...
+==> centralRouter: Preparing network interfaces based on configuration...
+    centralRouter: Adapter 1: nat
+    centralRouter: Adapter 2: intnet
+    centralRouter: Adapter 3: intnet
+    centralRouter: Adapter 8: intnet
+==> centralRouter: Forwarding ports...
+    centralRouter: 22 (guest) => 2201 (host) (adapter 1)
+==> centralRouter: Booting VM...
+==> centralRouter: Waiting for machine to boot. This may take a few minutes...
+    centralRouter: SSH address: 127.0.0.1:2201
+    centralRouter: SSH username: vagrant
+    centralRouter: SSH auth method: private key
+    centralRouter:
+    centralRouter: Vagrant insecure key detected. Vagrant will automatically replace
+    centralRouter: this with a newly generated keypair for better security.
+    centralRouter:
+    centralRouter: Inserting generated public key within guest...
+    centralRouter: Removing insecure key from the guest if it's present...
+    centralRouter: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> centralRouter: Machine booted and ready!
+==> centralRouter: Checking for guest additions in VM...
+    centralRouter: No guest additions were detected on the base box for this VM! Guest
+    centralRouter: additions are required for forwarded ports, shared folders, host only
+    centralRouter: networking, and more. If SSH fails on this machine, please install
+    centralRouter: the guest additions and repackage the box to continue.
+    centralRouter:
+    centralRouter: This is not an error message; everything may continue to work properly,
+    centralRouter: in which case you may ignore this message.
+==> centralRouter: Setting hostname...
+==> centralRouter: Configuring and enabling network interfaces...
+==> centralRouter: Rsyncing folder: /home/lx/git/test/ => /vagrant
+==> centralRouter: Running provisioner: shell...
+    centralRouter: Running: inline script
+==> centralRouter: Running provisioner: shell...
+    centralRouter: Running: inline script
+    centralRouter: Loaded plugins: fastestmirror
+    centralRouter: Determining fastest mirrors
+    centralRouter:  * base: mirror.corbina.net
+    centralRouter:  * extras: mirror.truenetwork.ru
+    centralRouter:  * updates: mirror.corbina.net
+    centralRouter: Resolving Dependencies
+    centralRouter: --> Running transaction check
+    centralRouter: ---> Package nmap.x86_64 2:6.40-19.el7 will be installed
+    centralRouter: --> Processing Dependency: nmap-ncat = 2:6.40-19.el7 for package: 2:nmap-6.40-19.el7.x86_64
+    centralRouter: --> Processing Dependency: libpcap.so.1()(64bit) for package: 2:nmap-6.40-19.el7.x86_64
+    centralRouter: --> Running transaction check
+    centralRouter: ---> Package libpcap.x86_64 14:1.5.3-12.el7 will be installed
+    centralRouter: ---> Package nmap-ncat.x86_64 2:6.40-19.el7 will be installed
+    centralRouter: --> Finished Dependency Resolution
+    centralRouter:
+    centralRouter: Dependencies Resolved
+    centralRouter:
+    centralRouter: ================================================================================
+    centralRouter:  Package           Arch           Version                    Repository    Size
+    centralRouter: ================================================================================
+    centralRouter: Installing:
+    centralRouter:  nmap              x86_64         2:6.40-19.el7              base         3.9 M
+    centralRouter: Installing for dependencies:
+    centralRouter:  libpcap           x86_64         14:1.5.3-12.el7            base         139 k
+    centralRouter:  nmap-ncat         x86_64         2:6.40-19.el7              base         206 k
+    centralRouter:
+    centralRouter: Transaction Summary
+    centralRouter: ================================================================================
+    centralRouter: Install  1 Package (+2 Dependent packages)
+    centralRouter:
+    centralRouter: Total download size: 4.3 M
+    centralRouter: Installed size: 17 M
+    centralRouter: Downloading packages:
+    centralRouter: Public key for libpcap-1.5.3-12.el7.x86_64.rpm is not installed
+    centralRouter: warning: /var/cache/yum/x86_64/7/base/packages/libpcap-1.5.3-12.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+    centralRouter: --------------------------------------------------------------------------------
+    centralRouter: Total                                              8.6 MB/s | 4.3 MB  00:00
+    centralRouter: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+    centralRouter: Importing GPG key 0xF4A80EB5:
+    centralRouter:  Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
+    centralRouter:  Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+    centralRouter:  Package    : centos-release-7-8.2003.0.el7.centos.x86_64 (@anaconda)
+    centralRouter:  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+    centralRouter: Running transaction check
+    centralRouter: Running transaction test
+    centralRouter: Transaction test succeeded
+    centralRouter: Running transaction
+    centralRouter:   Installing : 14:libpcap-1.5.3-12.el7.x86_64                               1/3
+    centralRouter:
+    centralRouter:   Installing : 2:nmap-ncat-6.40-19.el7.x86_64                               2/3
+    centralRouter:
+    centralRouter:   Installing : 2:nmap-6.40-19.el7.x86_64                                    3/3
+    centralRouter:
+    centralRouter:   Verifying  : 2:nmap-ncat-6.40-19.el7.x86_64                               1/3
+    centralRouter:
+    centralRouter:   Verifying  : 14:libpcap-1.5.3-12.el7.x86_64                               2/3
+    centralRouter:
+    centralRouter:   Verifying  : 2:nmap-6.40-19.el7.x86_64                                    3/3
+    centralRouter:
+    centralRouter:
+    centralRouter: Installed:
+    centralRouter:   nmap.x86_64 2:6.40-19.el7
+    centralRouter:
+    centralRouter: Dependency Installed:
+    centralRouter:   libpcap.x86_64 14:1.5.3-12.el7         nmap-ncat.x86_64 2:6.40-19.el7
+    centralRouter:
+    centralRouter: Complete!
+==> centralServer: Importing base box 'centos/7'...
+==> centralServer: Matching MAC address for NAT networking...
+==> centralServer: Checking if box 'centos/7' version '2004.01' is up to date...
+==> centralServer: Setting the name of the VM: test_centralServer_1638093255137_82411
+==> centralServer: Fixed port collision for 22 => 2222. Now on port 2202.
+==> centralServer: Clearing any previously set network interfaces...
+==> centralServer: Preparing network interfaces based on configuration...
+    centralServer: Adapter 1: nat
+    centralServer: Adapter 2: intnet
+==> centralServer: Forwarding ports...
+    centralServer: 22 (guest) => 2202 (host) (adapter 1)
+==> centralServer: Booting VM...
+==> centralServer: Waiting for machine to boot. This may take a few minutes...
+    centralServer: SSH address: 127.0.0.1:2202
+    centralServer: SSH username: vagrant
+    centralServer: SSH auth method: private key
+    centralServer:
+    centralServer: Vagrant insecure key detected. Vagrant will automatically replace
+    centralServer: this with a newly generated keypair for better security.
+    centralServer:
+    centralServer: Inserting generated public key within guest...
+    centralServer: Removing insecure key from the guest if it's present...
+    centralServer: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> centralServer: Machine booted and ready!
+==> centralServer: Checking for guest additions in VM...
+    centralServer: No guest additions were detected on the base box for this VM! Guest
+    centralServer: additions are required for forwarded ports, shared folders, host only
+    centralServer: networking, and more. If SSH fails on this machine, please install
+    centralServer: the guest additions and repackage the box to continue.
+    centralServer:
+    centralServer: This is not an error message; everything may continue to work properly,
+    centralServer: in which case you may ignore this message.
+==> centralServer: Setting hostname...
+==> centralServer: Configuring and enabling network interfaces...
+==> centralServer: Rsyncing folder: /home/lx/git/test/ => /vagrant
+==> centralServer: Running provisioner: shell...
+    centralServer: Running: inline script
+==> centralServer: Running provisioner: shell...
+    centralServer: Running: inline script
+    centralServer: Loaded plugins: fastestmirror
+    centralServer: Determining fastest mirrors
+    centralServer:  * base: mirrors.datahouse.ru
+    centralServer:  * extras: mirror.truenetwork.ru
+    centralServer:  * updates: mirror.reconn.ru
+    centralServer: Resolving Dependencies
+    centralServer: --> Running transaction check
+    centralServer: ---> Package epel-release.noarch 0:7-11 will be installed
+    centralServer: --> Finished Dependency Resolution
+    centralServer:
+    centralServer: Dependencies Resolved
+    centralServer:
+    centralServer: ================================================================================
+    centralServer:  Package                Arch             Version         Repository        Size
+    centralServer: ================================================================================
+    centralServer: Installing:
+    centralServer:  epel-release           noarch           7-11            extras            15 k
+    centralServer:
+    centralServer: Transaction Summary
+    centralServer: ================================================================================
+    centralServer: Install  1 Package
+    centralServer:
+    centralServer: Total download size: 15 k
+    centralServer: Installed size: 24 k
+    centralServer: Downloading packages:
+    centralServer: Public key for epel-release-7-11.noarch.rpm is not installed
+    centralServer: warning: /var/cache/yum/x86_64/7/extras/packages/epel-release-7-11.noarch.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+    centralServer: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+    centralServer: Importing GPG key 0xF4A80EB5:
+    centralServer:  Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
+    centralServer:  Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+    centralServer:  Package    : centos-release-7-8.2003.0.el7.centos.x86_64 (@anaconda)
+    centralServer:  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+    centralServer: Running transaction check
+    centralServer: Running transaction test
+    centralServer: Transaction test succeeded
+    centralServer: Running transaction
+    centralServer:   Installing : epel-release-7-11.noarch                                     1/1
+    centralServer:
+    centralServer:   Verifying  : epel-release-7-11.noarch                                     1/1
+    centralServer:
+    centralServer:
+    centralServer: Installed:
+    centralServer:   epel-release.noarch 0:7-11
+    centralServer:
+    centralServer: Complete!
+    centralServer: Loaded plugins: fastestmirror
+    centralServer: Loading mirror speeds from cached hostfile
+    centralServer:  * base: mirrors.datahouse.ru
+    centralServer:  * epel: mirror.yandex.ru
+    centralServer:  * extras: mirror.truenetwork.ru
+    centralServer:  * updates: mirror.reconn.ru
+    centralServer: Resolving Dependencies
+    centralServer: --> Running transaction check
+    centralServer: ---> Package nginx.x86_64 1:1.20.1-9.el7 will be installed
+    centralServer: --> Processing Dependency: nginx-filesystem = 1:1.20.1-9.el7 for package: 1:nginx-1.20.1-9.el7.x86_64
+    centralServer: --> Processing Dependency: libcrypto.so.1.1(OPENSSL_1_1_0)(64bit) for package: 1:nginx-1.20.1-9.el7.x86_64
+    centralServer: --> Processing Dependency: libssl.so.1.1(OPENSSL_1_1_0)(64bit) for package: 1:nginx-1.20.1-9.el7.x86_64
+    centralServer: --> Processing Dependency: libssl.so.1.1(OPENSSL_1_1_1)(64bit) for package: 1:nginx-1.20.1-9.el7.x86_64
+    centralServer: --> Processing Dependency: nginx-filesystem for package: 1:nginx-1.20.1-9.el7.x86_64
+    centralServer: --> Processing Dependency: redhat-indexhtml for package: 1:nginx-1.20.1-9.el7.x86_64
+    centralServer: --> Processing Dependency: system-logos for package: 1:nginx-1.20.1-9.el7.x86_64
+    centralServer: --> Processing Dependency: libcrypto.so.1.1()(64bit) for package: 1:nginx-1.20.1-9.el7.x86_64
+    centralServer: --> Processing Dependency: libprofiler.so.0()(64bit) for package: 1:nginx-1.20.1-9.el7.x86_64
+    centralServer: --> Processing Dependency: libssl.so.1.1()(64bit) for package: 1:nginx-1.20.1-9.el7.x86_64
+    centralServer: --> Running transaction check
+    centralServer: ---> Package centos-indexhtml.noarch 0:7-9.el7.centos will be installed
+    centralServer: ---> Package centos-logos.noarch 0:70.0.6-3.el7.centos will be installed
+    centralServer: ---> Package gperftools-libs.x86_64 0:2.6.1-1.el7 will be installed
+    centralServer: ---> Package nginx-filesystem.noarch 1:1.20.1-9.el7 will be installed
+    centralServer: ---> Package openssl11-libs.x86_64 1:1.1.1k-2.el7 will be installed
+    centralServer: --> Finished Dependency Resolution
+    centralServer:
+    centralServer: Dependencies Resolved
+    centralServer:
+    centralServer: ================================================================================
+    centralServer:  Package                Arch         Version                   Repository  Size
+    centralServer: ================================================================================
+    centralServer: Installing:
+    centralServer:  nginx                  x86_64       1:1.20.1-9.el7            epel       587 k
+    centralServer: Installing for dependencies:
+    centralServer:  centos-indexhtml       noarch       7-9.el7.centos            base        92 k
+    centralServer:  centos-logos           noarch       70.0.6-3.el7.centos       base        21 M
+    centralServer:  gperftools-libs        x86_64       2.6.1-1.el7               base       272 k
+    centralServer:  nginx-filesystem       noarch       1:1.20.1-9.el7            epel        24 k
+    centralServer:  openssl11-libs         x86_64       1:1.1.1k-2.el7            epel       1.5 M
+    centralServer:
+    centralServer: Transaction Summary
+    centralServer: ================================================================================
+    centralServer: Install  1 Package (+5 Dependent packages)
+    centralServer:
+    centralServer: Total download size: 24 M
+    centralServer: Installed size: 28 M
+    centralServer: Downloading packages:
+    centralServer: Public key for nginx-1.20.1-9.el7.x86_64.rpm is not installed
+    centralServer: warning: /var/cache/yum/x86_64/7/epel/packages/nginx-1.20.1-9.el7.x86_64.rpm: Header V4 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
+    centralServer: --------------------------------------------------------------------------------
+    centralServer: Total                                               14 MB/s |  24 MB  00:01
+    centralServer: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+    centralServer: Importing GPG key 0x352C64E5:
+    centralServer:  Userid     : "Fedora EPEL (7) <epel@fedoraproject.org>"
+    centralServer:  Fingerprint: 91e9 7d7c 4a5e 96f1 7f3e 888f 6a2f aea2 352c 64e5
+    centralServer:  Package    : epel-release-7-11.noarch (@extras)
+    centralServer:  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+    centralServer: Running transaction check
+    centralServer: Running transaction test
+    centralServer: Transaction test succeeded
+    centralServer: Running transaction
+    centralServer:   Installing : centos-logos-70.0.6-3.el7.centos.noarch                      1/6
+    centralServer:
+    centralServer:   Installing : centos-indexhtml-7-9.el7.centos.noarch                       2/6
+    centralServer:
+    centralServer:   Installing : 1:openssl11-libs-1.1.1k-2.el7.x86_64                         3/6
+    centralServer:
+    centralServer:   Installing : gperftools-libs-2.6.1-1.el7.x86_64                           4/6
+    centralServer:
+    centralServer:   Installing : 1:nginx-filesystem-1.20.1-9.el7.noarch                       5/6
+    centralServer:
+    centralServer:   Installing : 1:nginx-1.20.1-9.el7.x86_64                                  6/6
+    centralServer:
+    centralServer:   Verifying  : 1:nginx-filesystem-1.20.1-9.el7.noarch                       1/6
+    centralServer:
+    centralServer:   Verifying  : 1:nginx-1.20.1-9.el7.x86_64                                  2/6
+    centralServer:
+    centralServer:   Verifying  : gperftools-libs-2.6.1-1.el7.x86_64                           3/6
+    centralServer:
+    centralServer:   Verifying  : 1:openssl11-libs-1.1.1k-2.el7.x86_64                         4/6
+    centralServer:
+    centralServer:   Verifying  : centos-indexhtml-7-9.el7.centos.noarch                       5/6
+    centralServer:
+    centralServer:   Verifying  : centos-logos-70.0.6-3.el7.centos.noarch                      6/6
+    centralServer:
+    centralServer:
+    centralServer: Installed:
+    centralServer:   nginx.x86_64 1:1.20.1-9.el7
+    centralServer:
+    centralServer: Dependency Installed:
+    centralServer:   centos-indexhtml.noarch 0:7-9.el7.centos
+    centralServer:   centos-logos.noarch 0:70.0.6-3.el7.centos
+    centralServer:   gperftools-libs.x86_64 0:2.6.1-1.el7
+    centralServer:   nginx-filesystem.noarch 1:1.20.1-9.el7
+    centralServer:   openssl11-libs.x86_64 1:1.1.1k-2.el7
+    centralServer:
+    centralServer: Complete!
+    centralServer: Created symlink from /etc/systemd/system/multi-user.target.wants/nginx.service to /usr/lib/systemd/system/nginx.service.
+root@otssTestServer:/home/lx/git/test# vagrant ssh centralRouter
+[vagrant@centralRouter ~]$ sudo -i
+[root@centralRouter ~]# ssh vagrant@192.168.255.1
+^C
+[root@centralRouter ~]# /vagrant/knock.sh 192.168.255.1 8881 7777 9991
+
+Starting Nmap 6.40 ( http://nmap.org ) at 2021-11-28 10:02 UTC
+Warning: 192.168.255.1 giving up on port because retransmission cap hit (0).
+Nmap scan report for 192.168.255.1
+Host is up (0.00060s latency).
+PORT     STATE    SERVICE
+8881/tcp filtered unknown
+MAC Address: 08:00:27:2E:B2:BB (Cadmus Computer Systems)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.41 seconds
+
+Starting Nmap 6.40 ( http://nmap.org ) at 2021-11-28 10:02 UTC
+Warning: 192.168.255.1 giving up on port because retransmission cap hit (0).
+Nmap scan report for 192.168.255.1
+Host is up (0.00054s latency).
+PORT     STATE    SERVICE
+7777/tcp filtered cbt
+MAC Address: 08:00:27:2E:B2:BB (Cadmus Computer Systems)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.34 seconds
+
+Starting Nmap 6.40 ( http://nmap.org ) at 2021-11-28 10:02 UTC
+Warning: 192.168.255.1 giving up on port because retransmission cap hit (0).
+Nmap scan report for 192.168.255.1
+Host is up (0.00052s latency).
+PORT     STATE    SERVICE
+9991/tcp filtered issa
+MAC Address: 08:00:27:2E:B2:BB (Cadmus Computer Systems)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.34 seconds
+[root@centralRouter ~]# ssh vagrant@192.168.255.1
+The authenticity of host '192.168.255.1 (192.168.255.1)' can't be established.
+ECDSA key fingerprint is SHA256:YFN+GLHcpmCjaRuDE3kCYaTDU3MByDSmMCBpGfZlht0.
+ECDSA key fingerprint is MD5:da:1d:97:50:1c:09:36:82:30:21:83:31:26:87:06:cb.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '192.168.255.1' (ECDSA) to the list of known hosts.
+vagrant@192.168.255.1's password:
+[vagrant@inetRouter ~]$ logout
+Connection to 192.168.255.1 closed.
+[root@centralRouter ~]# curl http://192.168.254.1:8080
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Welcome to CentOS</title>
+  <style rel="stylesheet" type="text/css">
+
+        html {
+        background-image:url(img/html-background.png);
+        background-color: white;
+        font-family: "DejaVu Sans", "Liberation Sans", sans-serif;
+        font-size: 0.85em;
+        line-height: 1.25em;
+        margin: 0 4% 0 4%;
+        }
+
+        body {
+        border: 10px solid #fff;
+        margin:0;
+        padding:0;
+        background: #fff;
+        }
+
+        /* Links */
+
+        a:link { border-bottom: 1px dotted #ccc; text-decoration: none; color: #204d92; }
+        a:hover { border-bottom:1px dotted #ccc; text-decoration: underline; color: green; }
+        a:active {  border-bottom:1px dotted #ccc; text-decoration: underline; color: #204d92; }
+        a:visited { border-bottom:1px dotted #ccc; text-decoration: none; color: #204d92; }
+        a:visited:hover { border-bottom:1px dotted #ccc; text-decoration: underline; color: green; }
+
+        .logo a:link,
+        .logo a:hover,
+        .logo a:visited { border-bottom: none; }
+
+        .mainlinks a:link { border-bottom: 1px dotted #ddd; text-decoration: none; color: #eee; }
+        .mainlinks a:hover { border-bottom:1px dotted #ddd; text-decoration: underline; color: white; }
+        .mainlinks a:active { border-bottom:1px dotted #ddd; text-decoration: underline; color: white; }
+        .mainlinks a:visited { border-bottom:1px dotted #ddd; text-decoration: none; color: white; }
+        .mainlinks a:visited:hover { border-bottom:1px dotted #ddd; text-decoration: underline; color: white; }
+
+        /* User interface styles */
+
+        #header {
+        margin:0;
+        padding: 0.5em;
+        background: #204D8C url(img/header-background.png);
+        text-align: left;
+        }
+
+        .logo {
+        padding: 0;
+        /* For text only logo */
+        font-size: 1.4em;
+        line-height: 1em;
+        font-weight: bold;
+        }
+
+        .logo img {
+        vertical-align: middle;
+        padding-right: 1em;
+        }
+
+        .logo a {
+        color: #fff;
+        text-decoration: none;
+        }
+
+        p {
+        line-height:1.5em;
+        }
+
+        h1 {
+                margin-bottom: 0;
+                line-height: 1.9em; }
+        h2 {
+                margin-top: 0;
+                line-height: 1.7em; }
+
+        #content {
+        clear:both;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+        border-bottom: 5px solid #eee;
+        }
+
+    .mainlinks {
+        float: right;
+        margin-top: 0.5em;
+        text-align: right;
+    }
+
+    ul.mainlinks > li {
+    border-right: 1px dotted #ddd;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: inline;
+    list-style: none;
+    }
+
+    ul.mainlinks > li.last,
+    ul.mainlinks > li.first {
+    border-right: none;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<div id="header">
+
+    <ul class="mainlinks">
+        <li> <a href="http://www.centos.org/">Home</a> </li>
+        <li> <a href="http://wiki.centos.org/">Wiki</a> </li>
+        <li> <a href="http://wiki.centos.org/GettingHelp/ListInfo">Mailing Lists</a></li>
+        <li> <a href="http://www.centos.org/download/mirrors/">Mirror List</a></li>
+        <li> <a href="http://wiki.centos.org/irc">IRC</a></li>
+        <li> <a href="https://www.centos.org/forums/">Forums</a></li>
+        <li> <a href="http://bugs.centos.org/">Bugs</a> </li>
+        <li class="last"> <a href="http://wiki.centos.org/Donate">Donate</a></li>
+    </ul>
+
+        <div class="logo">
+                <a href="http://www.centos.org/"><img src="img/centos-logo.png" border="0"></a>
+        </div>
+
+</div>
+
+<div id="content">
+
+        <h1>Welcome to CentOS</h1>
+
+        <h2>The Community ENTerprise Operating System</h2>
+
+        <p><a href="http://www.centos.org/">CentOS</a> is an Enterprise-class Linux Distribution derived from sources freely provided
+to the public by Red Hat, Inc. for Red Hat Enterprise Linux.  CentOS conforms fully with the upstream vendors
+redistribution policy and aims to be functionally compatible. (CentOS mainly changes packages to remove upstream vendor
+branding and artwork.)</p>
+
+        <p>CentOS is developed by a small but growing team of core
+developers.&nbsp; In turn the core developers are supported by an active user community
+including system administrators, network administrators, enterprise users, managers, core Linux contributors and Linux enthusiasts from around the world.</p>
+
+        <p>CentOS has numerous advantages including: an active and growing user community, quickly rebuilt, tested, and QA'ed errata packages, an extensive <a href="http://www.centos.org/download/mirrors/">mirror network</a>, developers who are contactable and responsive, Special Interest Groups (<a href="http://wiki.centos.org/SpecialInterestGroup/">SIGs</a>) to add functionality to the core CentOS distribution, and multiple community support avenues including a <a href="http://wiki.centos.org/">wiki</a>, <a
+href="http://wiki.centos.org/irc">IRC Chat</a>, <a href="http://wiki.centos.org/GettingHelp/ListInfo">Email Lists</a>, <a href="https://www.centos.org/forums/">Forums</a>, <a href="http://bugs.centos.org/">Bugs Database</a>, and an <a
+href="http://wiki.centos.org/FAQ/">FAQ</a>.</p>
+
+        </div>
+
+</div>
+
+
+</body>
+</html>
+root@otssTestServer:/home/lx/git/test# curl http://172.28.128.3:8080
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Welcome to CentOS</title>
+  <style rel="stylesheet" type="text/css">
+
+        html {
+        background-image:url(img/html-background.png);
+        background-color: white;
+        font-family: "DejaVu Sans", "Liberation Sans", sans-serif;
+        font-size: 0.85em;
+        line-height: 1.25em;
+        margin: 0 4% 0 4%;
+        }
+
+        body {
+        border: 10px solid #fff;
+        margin:0;
+        padding:0;
+        background: #fff;
+        }
+
+        /* Links */
+
+        a:link { border-bottom: 1px dotted #ccc; text-decoration: none; color: #204d92; }
+        a:hover { border-bottom:1px dotted #ccc; text-decoration: underline; color: green; }
+        a:active {  border-bottom:1px dotted #ccc; text-decoration: underline; color: #204d92; }
+        a:visited { border-bottom:1px dotted #ccc; text-decoration: none; color: #204d92; }
+        a:visited:hover { border-bottom:1px dotted #ccc; text-decoration: underline; color: green; }
+
+        .logo a:link,
+        .logo a:hover,
+        .logo a:visited { border-bottom: none; }
+
+        .mainlinks a:link { border-bottom: 1px dotted #ddd; text-decoration: none; color: #eee; }
+        .mainlinks a:hover { border-bottom:1px dotted #ddd; text-decoration: underline; color: white; }
+        .mainlinks a:active { border-bottom:1px dotted #ddd; text-decoration: underline; color: white; }
+        .mainlinks a:visited { border-bottom:1px dotted #ddd; text-decoration: none; color: white; }
+        .mainlinks a:visited:hover { border-bottom:1px dotted #ddd; text-decoration: underline; color: white; }
+
+        /* User interface styles */
+
+        #header {
+        margin:0;
+        padding: 0.5em;
+        background: #204D8C url(img/header-background.png);
+        text-align: left;
+        }
+
+        .logo {
+        padding: 0;
+        /* For text only logo */
+        font-size: 1.4em;
+        line-height: 1em;
+        font-weight: bold;
+        }
+
+        .logo img {
+        vertical-align: middle;
+        padding-right: 1em;
+        }
+
+        .logo a {
+        color: #fff;
+        text-decoration: none;
+        }
+
+        p {
+        line-height:1.5em;
+        }
+
+        h1 {
+                margin-bottom: 0;
+                line-height: 1.9em; }
+        h2 {
+                margin-top: 0;
+                line-height: 1.7em; }
+
+        #content {
+        clear:both;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+        border-bottom: 5px solid #eee;
+        }
+
+    .mainlinks {
+        float: right;
+        margin-top: 0.5em;
+        text-align: right;
+    }
+
+    ul.mainlinks > li {
+    border-right: 1px dotted #ddd;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: inline;
+    list-style: none;
+    }
+
+    ul.mainlinks > li.last,
+    ul.mainlinks > li.first {
+    border-right: none;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<div id="header">
+
+    <ul class="mainlinks">
+        <li> <a href="http://www.centos.org/">Home</a> </li>
+        <li> <a href="http://wiki.centos.org/">Wiki</a> </li>
+        <li> <a href="http://wiki.centos.org/GettingHelp/ListInfo">Mailing Lists</a></li>
+        <li> <a href="http://www.centos.org/download/mirrors/">Mirror List</a></li>
+        <li> <a href="http://wiki.centos.org/irc">IRC</a></li>
+        <li> <a href="https://www.centos.org/forums/">Forums</a></li>
+        <li> <a href="http://bugs.centos.org/">Bugs</a> </li>
+        <li class="last"> <a href="http://wiki.centos.org/Donate">Donate</a></li>
+    </ul>
+
+        <div class="logo">
+                <a href="http://www.centos.org/"><img src="img/centos-logo.png" border="0"></a>
+        </div>
+
+</div>
+
+<div id="content">
+
+        <h1>Welcome to CentOS</h1>
+
+        <h2>The Community ENTerprise Operating System</h2>
+
+        <p><a href="http://www.centos.org/">CentOS</a> is an Enterprise-class Linux Distribution derived from sources freely provided
+to the public by Red Hat, Inc. for Red Hat Enterprise Linux.  CentOS conforms fully with the upstream vendors
+redistribution policy and aims to be functionally compatible. (CentOS mainly changes packages to remove upstream vendor
+branding and artwork.)</p>
+
+        <p>CentOS is developed by a small but growing team of core
+developers.&nbsp; In turn the core developers are supported by an active user community
+including system administrators, network administrators, enterprise users, managers, core Linux contributors and Linux enthusiasts from around the world.</p>
+
+        <p>CentOS has numerous advantages including: an active and growing user community, quickly rebuilt, tested, and QA'ed errata packages, an extensive <a href="http://www.centos.org/download/mirrors/">mirror network</a>, developers who are contactable and responsive, Special Interest Groups (<a href="http://wiki.centos.org/SpecialInterestGroup/">SIGs</a>) to add functionality to the core CentOS distribution, and multiple community support avenues including a <a href="http://wiki.centos.org/">wiki</a>, <a
+href="http://wiki.centos.org/irc">IRC Chat</a>, <a href="http://wiki.centos.org/GettingHelp/ListInfo">Email Lists</a>, <a href="https://www.centos.org/forums/">Forums</a>, <a href="http://bugs.centos.org/">Bugs Database</a>, and an <a
+href="http://wiki.centos.org/FAQ/">FAQ</a>.</p>
+
+        </div>
+
+</div>
+
+
+</body>
+</html>
