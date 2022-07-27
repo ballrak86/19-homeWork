@@ -1,0 +1,35 @@
+---
+# tasks file for centralServer
+- name: install epel-release
+  yum:
+    name: epel-release
+    state: present
+
+- name: install nginx
+  yum:
+    name: nginx
+    state: present
+
+- name: enable and start nginx
+  systemd:
+    name: nginx
+    enabled: yes
+    state: started
+
+- name: correct interface eth0
+  lineinfile:
+    path: /etc/sysconfig/network-scripts/ifcfg-eth0
+    regexp: 'DEFROUTE'
+    line: DEFROUTE=no
+
+- name: correct interface eth1
+  lineinfile:
+    path: /etc/sysconfig/network-scripts/ifcfg-eth1
+    regexp: 'GATEWAY'
+    line: GATEWAY=192.168.255.1
+
+- name: restart network
+  systemd:
+    name: network
+    state: restarted
+

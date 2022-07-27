@@ -1,0 +1,5 @@
+---
+# vars file for centralRouter
+sysctl_config:
+  net.ipv4.conf.all.forwarding: 1
+  net.ipv4.conf.all.proxy_arp: 1

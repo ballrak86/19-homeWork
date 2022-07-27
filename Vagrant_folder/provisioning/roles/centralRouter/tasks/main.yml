@@ -1,0 +1,39 @@
+---
+# tasks file for centralRouter
+- name: install nmap
+  yum:
+    name: nmap
+    state: present
+
+- name: add execute to file
+  file:
+    path: /vagrant/knock.sh
+    mode: '0755'
+
+- name: Change various sysctl-settings
+  sysctl:
+    name: '{{ item.key }}'
+    value: '{{ item.value }}'
+    sysctl_set: yes
+    state: present
+    reload: yes
+    ignoreerrors: yes
+  with_dict: '{{ sysctl_config }}'
+
+- name: correct interface eth0
+  lineinfile:
+    path: /etc/sysconfig/network-scripts/ifcfg-eth0
+    regexp: 'DEFROUTE'
+    line: DEFROUTE=no
+
+- name: correct interface eth1
+  lineinfile:
+    path: /etc/sysconfig/network-scripts/ifcfg-eth1
+    regexp: 'GATEWAY'
+    line: GATEWAY=192.168.255.1
+
+- name: restart network
+  systemd:
+    name: network
+    state: restarted
+

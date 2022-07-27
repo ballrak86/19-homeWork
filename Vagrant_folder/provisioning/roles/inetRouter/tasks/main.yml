@@ -1,0 +1,71 @@
+---
+# tasks file for inetRouter
+- name: enable ip_forward
+  sysctl:
+    name: net.ipv4.ip_forward
+    value: '1'
+    sysctl_set: yes
+
+- name: MASQUERADE
+  iptables_raw:
+    name: MASQUERADE
+    table: nat
+    rules: |
+      -A POSTROUTING ! -d 192.168.0.0/16 -o eth0 -j MASQUERADE
+
+- name: custom SSH-INPUT
+  iptables_raw:
+    name: custom SSH-INPUT
+    rules: |
+      -N SSH-INPUT
+      -A SSH-INPUT -m recent --name SSH1 --set -j DROP
+
+- name: custom SSH-INPUTTWO
+  iptables_raw:
+    name: custom SSH-INPUTTWO
+    rules: |
+      -N SSH-INPUTTWO
+      -A SSH-INPUTTWO -m recent --name SSH2 --set -j DROP
+
+- name: cutstom TRAFFIC
+  iptables_raw:
+    name: custom TRAFFIC
+    rules: |
+      -N TRAFFIC
+      -A INPUT -j TRAFFIC
+      -A TRAFFIC -p icmp --icmp-type any -j ACCEPT
+      -A TRAFFIC -m state --state ESTABLISHED,RELATED -j ACCEPT
+      -A TRAFFIC -m state --state NEW -m tcp -p tcp --dport 22 -m recent --rcheck --seconds 30 --name SSH2 -j ACCEPT
+      -A TRAFFIC -m state --state NEW -m tcp -p tcp -m recent --name SSH2 --remove -j DROP
+      -A TRAFFIC -m state --state NEW -m tcp -p tcp --dport 9991 -m recent --rcheck --name SSH1 -j SSH-INPUTTWO
+      -A TRAFFIC -m state --state NEW -m tcp -p tcp -m recent --name SSH1 --remove -j DROP
+      -A TRAFFIC -m state --state NEW -m tcp -p tcp --dport 7777 -m recent --rcheck --name SSH0 -j SSH-INPUT
+      -A TRAFFIC -m state --state NEW -m tcp -p tcp -m recent --name SSH0 --remove -j DROP
+      -A TRAFFIC -m state --state NEW -m tcp -p tcp --dport 8881 -m recent --name SSH0 --set -j DROP
+      -A TRAFFIC -j DROP
+
+- name: configure static route
+  nmcli:
+    conn_name: 'System eth1'
+    type: ethernet
+    autoconnect: yes
+    routes4:
+      - 192.168.0.0/24 192.168.255.2
+      - 192.168.1.0/24 192.168.255.2
+      - 192.168.2.0/24 192.168.255.2
+    state: present
+  notify:
+    - reconnect interface_eth1
+
+- name: change StrictHostKeyChecking
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^PasswordAuthentication no'
+    line: PasswordAuthentication yes
+    state: present
+
+- name: restart sshd
+  systemd:
+    name: sshd
+    state: restarted
+

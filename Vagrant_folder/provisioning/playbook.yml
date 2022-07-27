@@ -1,0 +1,20 @@
+---
+- hosts: inetRouter
+  become: true
+  roles:
+    - inetRouter
+
+- hosts: inetRouter2
+  become: true
+  roles: 
+    - inetRouter2
+
+- hosts: centralRouter
+  become: true
+  roles:
+    - centralRouter
+
+- hosts: centralServer
+  become: true
+  roles:
+    - centralServer

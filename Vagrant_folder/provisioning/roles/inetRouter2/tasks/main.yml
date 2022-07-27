@@ -1,0 +1,24 @@
+---
+# tasks file for inetRouter2
+- name: enable ip_forward
+  sysctl:
+    name: net.ipv4.ip_forward
+    value: '1'
+    sysctl_set: yes
+
+- name: routing
+  iptables_raw:
+    name: routing
+    table: nat
+    rules: |
+      -A PREROUTING -p tcp --dport 8080 -j DNAT --to-destination 192.168.0.2:80
+      -A POSTROUTING -p tcp --dst 192.168.0.2 --dport 80 -j SNAT --to 192.168.254.1
+
+- name: configure static route
+  nmcli:
+    conn_name: 'System eth2'
+    type: ethernet
+    routes4: 192.168.0.2/32 192.168.254.2
+    state: present
+  notify:
+    - reconnect interface_eth2

@@ -1,0 +1,5 @@
+---
+# handlers file for inetRouter
+- name: reconnect interface_eth1
+  shell:
+    cmd: nmcli con up id 'System eth1'

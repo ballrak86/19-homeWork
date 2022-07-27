@@ -5,3 +5,4 @@ for ARG in "$@"
 do
   nmap -Pn --max-retries 0 -p $ARG $HOST
 done
+
